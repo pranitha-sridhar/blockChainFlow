@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"
+    tools:context=".fragment.PowFragment">
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/close"
+            android:layout_gravity="top|start"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_close"
+            android:layout_margin="15dp"/>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:fillViewport="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="25dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textTitle"
+                        android:text="Set Proof Of Work"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:layout_marginBottom="24dp"
+                        android:textColor="@android:color/holo_green_light"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+                        android:hint="Power Game"
+                        android:layout_margin="15dp"/>
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/editSetPower"
+                        android:inputType="numberDecimal"
+                        android:digits="1234567890"
+                        android:imeOptions="actionDone"
+                        android:maxLength="2"
+                        android:maxLines="1"
+                        android:padding="8dp"
+                        android:textColorHint="@android:color/darker_gray"
+                        android:textColor="@color/black"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:text="2"
+                        android:textAlignment="textStart"
+                        android:textStyle="normal"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:text="Only for testing purposes!"
+                        android:textAlignment="center"
+                        android:layout_marginTop="10dp"/>
+                </LinearLayout>
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/continueButton"
+                    android:text="Submit"
+                    android:textStyle="bold"
+                    app:cornerRadius="10dp"
+                    android:layout_gravity="center_horizontal|bottom"/>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+</FrameLayout>
